@@ -1,0 +1,33 @@
+<idea-plugin>
+  <id>com.ie.group.InsertC</id>
+  <name>Insert Code</name>
+  <version>1.0</version>
+  <vendor>1.0</vendor>
+
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+  <depends>com.intellij.modules.lang</depends>
+  <depends>org.jetbrains.kotlin</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+
+    <group id="InsertC.IDCode" text="IE * Insert Codes" popup="true">
+      <add-to-group group-id="CodeMenu" anchor="first"/>
+      <action class="core.InsertAction" id="InsertC.Insert" text="Insert"></action>
+      <!--<action class="core.AssociateAction" id="InsertC.Deletet" text="Delete"></action>-->
+    </group>
+
+  </actions>
+
+</idea-plugin>
